@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Display App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles can be added here */
+    .recipe-card {
+      transition: transform 0.2s;
+    }
+    .recipe-card:hover {
+      transform: scale(1.05);
+    }
+    .recipe-modal {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-semibold mb-4">Recipes</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="recipe-cards">
+      <!-- Recipe Cards will be dynamically added here -->
+    </div>
+
+    <div class="fixed inset-0 flex items-center justify-center z-50 hidden recipe-modal" id="recipe-details">
+      <div class="bg-white max-w-lg p-6 rounded-lg relative">
+        <!-- Recipe Details will be dynamically added here -->
+        <button class="absolute top-2 right-2 text-gray-500 hover:text-gray-700" id="close-modal">×</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
